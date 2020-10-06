@@ -1,0 +1,16 @@
+{
+  "name": "sourcerer-profile-chart",
+  "version": "1.0.0",
+  "description": "sourcerer profile chart png extracter for website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "avisionx",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "image-clipper": "^0.4.4",
+    "puppeteer": "^5.3.1"
+  }
+}
