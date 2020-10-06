@@ -4,7 +4,7 @@
   "description": "sourcerer profile chart png extracter for website",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js --unhandled-rejections=strict"
   },
   "author": "avisionx",
   "license": "ISC",
