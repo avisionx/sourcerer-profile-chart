@@ -83,6 +83,13 @@ username = "avisionx";
 $ npm start
 ```
 
+5. Use Raw image after hosting on Github.
+```
+<img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/avisionx-sourcerer-chart.png" />
+# or 
+![avisionx-sourcerer-chart](https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/avisionx-sourcerer-chart.png)
+```
+
 <!-- ROADMAP -->
 
 ## Roadmap
