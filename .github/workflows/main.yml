@@ -1,0 +1,36 @@
+name: Generate Sourcerer Chart
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" #runs every week
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }} 🛎️
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies ✔️
+      - run: npm ci
+      - name: Generate stats 🎉
+      - run: npm start
+      - name: Add and Commit generated data ✨
+        run: |
+          git config --local user.email "avi.grg4567@gmail.com"
+          git config --local user.name "avisionx"
+          git add .
+          git commit -m "Update stats image 📊" || echo "No changes to commit"
+      - name: Push changes 🥂
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
