@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies ✔️
-      - run: npm ci
+        run: npm ci
       - name: Generate stats 🎉
-      - run: npm start
+        run: npm start
       - name: Add and Commit generated data ✨
         run: |
           git config --local user.email "avi.grg4567@gmail.com"
