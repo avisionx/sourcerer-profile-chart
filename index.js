@@ -15,7 +15,10 @@ const username = "avisionx";
     height: 600,
     deviceScaleFactor: 1,
   });
-  await page.goto("https://sourcerer.io/" + username);
+  await page.goto("https://sourcerer.io/" + username, {
+    waitUntil: "networkidle2",
+  });
+  await page.waitForTimeout(3000);
   await page.evaluate(() => {
     document.querySelector("#awesome-chart-section").scrollIntoView();
   });
