@@ -5,9 +5,9 @@ Clipper.configure({
   canvas: require("canvas"),
 });
 
-const username = "avisionx";
+const usernames = require("./usernames");
 
-(async () => {
+async function generateChart(username) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.setViewport({
@@ -18,21 +18,40 @@ const username = "avisionx";
   await page.goto("https://sourcerer.io/" + username, {
     waitUntil: "networkidle2",
   });
-  await page.waitForTimeout(3000);
-  await page.evaluate(() => {
-    document.querySelector("#awesome-chart-section").scrollIntoView();
+  if (page.url().includes("notfound")) {
+    browser.close();
+    return;
+  }
+  const closeBrowser = await page.evaluate(() => {
+    var overviewSelector = document.querySelector("#awesome-chart-section");
+    if (overviewSelector === null) {
+      return true;
+    } else {
+      overviewSelector.scrollIntoView();
+      return false;
+    }
   });
+  if (closeBrowser) {
+    browser.close();
+    return;
+  }
   await page.screenshot({
     path: "./charts/" + username + ".png",
   });
   await browser.close();
-})().then(() => {
-  Clipper(username + ".png", function () {
-    this.crop(150, 100, 2400, 1450).toFile(
-      "./charts/" + username + "-sourcerer-chart.png",
-      function () {
-        console.log("Generated Chart for " + username + "!");
-      }
-    );
+}
+
+(() => {
+  usernames.forEach((username) => {
+    generateChart(username).then(() => {
+      Clipper("./charts/" + username + ".png", function () {
+        this.crop(150, 100, 2400, 1450).toFile(
+          "./charts/" + username + "-sourcerer-chart.png",
+          function () {
+            console.log("Generated charts for " + username + "!");
+          }
+        );
+      });
+    });
   });
-});
+})();
