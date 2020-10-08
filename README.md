@@ -32,7 +32,8 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-<img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/avisionx-sourcerer-chart.png" width="100%" />
+
+<img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/charts/avisionx-sourcerer-chart.png" width="100%" />
 
 There are a lot of stats tracker for Github Readme available online, however, I didn't find one that was free and covered all data so I extracted one from sourcerer.io
 
@@ -73,6 +74,7 @@ $ npm install
 ```
 
 3. Change your `username` in `index.js` to generate statistics for yourself.
+
 ```js
 username = "avisionx";
 ```
@@ -84,9 +86,10 @@ $ npm start
 ```
 
 5. Use Raw image after hosting on Github.
+
 ```
 <img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/avisionx-sourcerer-chart.png" />
-# or 
+# or
 ![avisionx-sourcerer-chart](https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/avisionx-sourcerer-chart.png)
 ```
 

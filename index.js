@@ -23,15 +23,15 @@ const username = "avisionx";
     document.querySelector("#awesome-chart-section").scrollIntoView();
   });
   await page.screenshot({
-    path: username + ".png",
+    path: "./charts/" + username + ".png",
   });
   await browser.close();
 })().then(() => {
   Clipper(username + ".png", function () {
     this.crop(150, 100, 2400, 1450).toFile(
-      username + "-sourcerer-chart.png",
+      "./charts/" + username + "-sourcerer-chart.png",
       function () {
-        console.log("Saved File!");
+        console.log("Generated Chart for " + username + "!");
       }
     );
   });
