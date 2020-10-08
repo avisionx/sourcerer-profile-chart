@@ -95,7 +95,11 @@ $ npm start
 
 ```
 <img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/charts/avisionx-sourcerer-chart.png" />
-# or
+```
+
+<p align="center">OR</p>
+
+```
 ![avisionx-sourcerer-chart](https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/charts/avisionx-sourcerer-chart.png)
 ```
 
