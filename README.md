@@ -32,7 +32,7 @@
 <!-- ADD TO YOUR PROFILE -->
 
 ## Add to your Profile
-Easiest way to add chart to your Github like [https://github.com/avisionx](https://github.com/avisionx) is by creating a pull request and adding your username in `username.js` It will be updated weekly and will be free forever :smile: or to set it up yourself goto [Installation](#installation) section.
+Easiest way to add chart to your Github like [https://github.com/avisionx](https://github.com/avisionx) is by creating a pull request and adding your username in `username.js`. I'll merge the PR really soon then you can simply go on using your own chart like shown below in [Usage](#usage) section, it will be updated weekly and will be free forever :smile: or to set it up yourself goto [Installation](#installation) section.
 
 <!-- ABOUT THE PROJECT -->
 
@@ -91,7 +91,12 @@ usernames = ["avisionx", "another_user", "many_more" ...] // for multi_user
 $ npm start
 ```
 
-5. Use Raw image after hosting on Github.
+
+<!-- USAGE -->
+
+## Usage
+
+Use Raw image after hosting on Github.
 
 ```
 <img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/charts/avisionx-sourcerer-chart.png" />
