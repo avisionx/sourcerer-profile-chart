@@ -78,10 +78,11 @@ $ git clone https://github.com/avisionx/sourcerer-profile-chart.git
 $ npm install
 ```
 
-3. Change your `username` in `index.js` to generate statistics for yourself.
+3. Change/Add your `sourcerer_username` in `usernames.js` to generate statistics for yourself.
 
 ```js
-username = "avisionx";
+usernames = ["avisionx"]; // for single user
+usernames = ["avisionx", "another_user", "many_more" ...] // for multi_user
 ```
 
 4. Generate image
@@ -93,9 +94,9 @@ $ npm start
 5. Use Raw image after hosting on Github.
 
 ```
-<img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/avisionx-sourcerer-chart.png" />
+<img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/charts/avisionx-sourcerer-chart.png" />
 # or
-![avisionx-sourcerer-chart](https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/avisionx-sourcerer-chart.png)
+![avisionx-sourcerer-chart](https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/charts/avisionx-sourcerer-chart.png)
 ```
 
 <!-- ROADMAP -->
