@@ -17,7 +17,7 @@
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
-
+- [Add to your Profile](#add-to-your-profile)
 - [About the Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
@@ -28,6 +28,11 @@
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
+
+<!-- ADD TO YOUR PROFILE -->
+
+## Add to your Profile
+Easiest way to add chart to your Github like [https://github.com/avisionx](https://github.com/avisionx) is by creating a pull request and adding your username in `username.js` It will be updated weekly and will be free forever :smile: or to set it up yourself goto [Installation](#installation) section.
 
 <!-- ABOUT THE PROJECT -->
 
