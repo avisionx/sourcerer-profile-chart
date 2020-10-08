@@ -55,7 +55,7 @@ To get up and running with this project on your local machine follow these simpl
 
 Here's a list of things you'll need to have prior to generating the stats
 
-- Account on [https://sourcerer.io/](https://sourcerer.io/)
+- Account on Sourcerer like so [https://sourcerer.io/avisionx](https://sourcerer.io/avisionx)
 - Node Js v8+
 
 ### Installation
