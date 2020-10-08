@@ -96,7 +96,7 @@ $ npm start
 
 ## Usage
 
-Use Raw image after hosting on Github.
+Use Raw image from Github replace `avisionx` with your username if you have cloned the repo entirely else replace `avisionx-sourcerer-chart.png` only.
 
 ```
 <img src="https://raw.githubusercontent.com/avisionx/sourcerer-profile-chart/master/charts/avisionx-sourcerer-chart.png" />
