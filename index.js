@@ -8,16 +8,22 @@ Clipper.configure({
 const usernames = require("./usernames");
 
 async function generateChart(username) {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    ignoreHTTPSErrors: true,
+  });
   const page = await browser.newPage();
   await page.setViewport({
     width: 900,
     height: 600,
     deviceScaleFactor: 3,
   });
-  await page.goto("https://sourcerer.io/" + username, {
-    waitUntil: "networkidle2",
-  });
+  await page
+    .goto("https://sourcerer.io/" + username, {
+      waitUntil: "networkidle2",
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   if (page.url().includes("notfound")) {
     browser.close();
     return;
@@ -43,15 +49,19 @@ async function generateChart(username) {
 
 (() => {
   usernames.forEach((username) => {
-    generateChart(username).then(() => {
-      Clipper("./charts/" + username + ".png", function () {
-        this.crop(150, 100, 2400, 1450).toFile(
-          "./charts/" + username + "-sourcerer-chart.png",
-          function () {
-            console.log("Generated charts for " + username + "!");
-          }
-        );
+    generateChart(username)
+      .then(() => {
+        Clipper("./charts/" + username + ".png", function () {
+          this.crop(150, 100, 2400, 1450).toFile(
+            "./charts/" + username + "-sourcerer-chart.png",
+            function () {
+              console.log("Generated charts for " + username + "!");
+            }
+          );
+        });
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    });
   });
 })();
