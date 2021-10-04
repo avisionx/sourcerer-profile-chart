@@ -5,7 +5,7 @@
   <p align="center"><img src="https://img.shields.io/github/workflow/status/avisionx/sourcerer-profile-chart/Generate Sourcerer Chart?style=flat-square"> <img src="https://img.shields.io/badge/hacktoberfest-2020-ff69b4.svg?style=flat-square" /> <img src="https://img.shields.io/github/issues-raw/avisionx/sourcerer-profile-chart?style=flat-square"> <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Favisionx%2Fsourcerer-profile-chart" alt="Hits" /> <img src="https://img.shields.io/github/languages/count/avisionx/sourcerer-profile-chart?style=flat-square"> <img src="https://img.shields.io/github/languages/code-size/avisionx/sourcerer-profile-chart?style=flat-square"> <img src="https://img.shields.io/github/stars/avisionx/sourcerer-profile-chart?style=flat-square"> <img src="https://img.shields.io/github/contributors/avisionx/sourcerer-profile-chart?style=flat-square"> </p>
 
   <p align="center">
-    This repository generates sourcerer profile chart png website ✨
+    This repository generates sourcerer profile chart png from website ✨
     </br>
     <a href="https://github.com/avisionx/sourcerer-profile-chart/#table-of-contents"><strong>Explore the docs »</strong></a><br/>
     <a href="https://github.com/avisionx/">View Demo</a>
