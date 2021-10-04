@@ -49,7 +49,7 @@ Here's why:
 
 ### Built With
 
-This project was built with nodejs and is powered by github actions for cron job tasks.
+This project was built with nodejs and is powered by github actions for cron job tasks. 🤩
 
 <!-- GETTING STARTED -->
 
